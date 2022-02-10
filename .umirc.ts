@@ -10,6 +10,9 @@ export default defineConfig({
       path: '/', component: '@/layouts', routes: [
         {path: '/', component: '@/pages/home'},
         {path: '/markdown', component: '@/pages/markdown'},
+        {path: '/chart/flowchart', component: '@/pages/chart/flowchart'},
+        {path: '/chart/plot', component: '@/pages/chart/plot'},
+        {path: '/chart/hot', component: '@/pages/chart/hot'},
       ]
     },
   ],

@@ -2,6 +2,7 @@ import { Effect, Reducer } from 'umi';
 
 export interface CounterModelState {
   collapsed: boolean;
+  activeRoute: string;
 }
 
 export interface CounterModelType {
@@ -9,6 +10,7 @@ export interface CounterModelType {
   state: CounterModelState;
   effects: {
     changeCollapsed?: Effect;
+    changeActiveRoute?: Effect;
   };
   reducers: {
     save: Reducer<CounterModelState>;
@@ -21,17 +23,26 @@ const CounterModel: CounterModelType = {
   namespace: 'global',
   state: {
     collapsed: false,
+    activeRoute:localStorage.getItem('activeRoute')||'/'
   },
 
   effects: {
     *changeCollapsed({ payload }, { put }) {
-      console.log(payload);
       yield put({
         type: 'save',
         payload: {
           collapsed: payload.collapsed,
         },
       });
+    },
+    *changeActiveRoute({ payload }, { put }) {
+      yield put({
+        type: 'save',
+        payload: {
+          activeRoute: payload.activeRoute,
+        },
+      });
+      localStorage.setItem('activeRoute',payload.activeRoute)
     },
 
   },

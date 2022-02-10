@@ -1,6 +1,7 @@
 import BaseHeader from "@/layouts/components/BaseHeader";
 import BaseMenu from "@/layouts/components/BaseMenu";
-import styles from './index.module.less'
+import styles from './index.module.less';
+import './index.less';
 
 export default (props: any) => {
   return (

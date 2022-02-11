@@ -13,6 +13,8 @@ export default defineConfig({
         {path: '/chart/flowchart', component: '@/pages/chart/flowchart'},
         {path: '/chart/plot', component: '@/pages/chart/plot'},
         {path: '/chart/hot', component: '@/pages/chart/hot'},
+        {path: '/table/basic', component: '@/pages/table/basic-table'},
+        {path: '/table/drag', component: '@/pages/table/drag-table'},
       ]
     },
   ],

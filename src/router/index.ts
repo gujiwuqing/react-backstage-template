@@ -32,6 +32,21 @@ export const menu: menuItem[] = [
         path: '/chart/hot',
       }
     ]
+  },{
+    name: '表格',
+    icon: 'iconbarchart',
+    path: '/table',
+    children: [
+      {
+        name: '普通表格',
+        icon: '',
+        path: '/table/basic'
+      }, {
+        name: '拖拽表格',
+        icon: '',
+        path: '/table/drag'
+      },
+    ]
   },
   {
     name: 'markdown',
